@@ -1,18 +1,59 @@
+/*Använder variabler då det är lättare att göra stiländringar snabbt då*/
+:root{
+    --mainCol1: #141414;
+    --mainCol2: #011638;
+    --mainCol3: #0D21A1;
+    --mainCol4: #EEC643;
+    --mainCol5: #EEF0F2;
+}
+@font-face {
+    font-family: "MainFont";
+    src: url("../fonts/Coco-Sharp-Heavy-trial.ttf");
+}
+
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-#Logo{
-    width: 100px;
-    height: auto;
+body{
+    background-color: var(--mainCol1);
+}
+
+#logo{
+    width: 120px;
+    height: 120px;
+    
+}
+
+#logoCircle{
+    background-color: var(--mainCol4);
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #navLinks{
     list-style-type: none;
+    width: 100vw;
+    height: 100px;
+
+    background-color: var(--mainCol4);
 
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 45px;
+}
+
+li > a{
+    font-size: 35px;
+    font-family: MainFont;
+    text-decoration: none;
+    color: var(--mainCol1);
 }
