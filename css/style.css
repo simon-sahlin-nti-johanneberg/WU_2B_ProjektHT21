@@ -19,15 +19,15 @@
 }
 
 body{
-    background-color: var(--mainCol1);
+    background-color: var(--mainCol5);
 }
 
+/*----------NAV-BAR----------*/
 #logo{
     width: 120px;
     height: 120px;
     
 }
-
 #logoCircle{
     background-color: var(--mainCol4);
     width: 150px;
@@ -37,17 +37,37 @@ body{
     align-items: center;
     justify-content: center;
 }
-
 #navLinks{
-    list-style-type: none;
-    width: 100vw;
-    height: 100px;
+    width: 100%;
+    height: 80px;
 
     background-color: var(--mainCol4);
 
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    gap: 10px;
+}
+#leftLinks{
+    list-style-type: none;
+
+    height: 100%;
+    width: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 45px;
+}
+#rightLinks{
+    list-style-type: none;
+
+    height: 100%;
+    width: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     gap: 45px;
 }
 
@@ -56,4 +76,103 @@ li > a{
     font-family: MainFont;
     text-decoration: none;
     color: var(--mainCol1);
+}
+/*--------------------*/
+
+#banner{
+    width: 100%;
+    height: 90vh;
+    background-image: url("../img/Banner.jpg");
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-size: 150px;
+    font-family: MainFont;
+    color: var(--mainCol5);
+    text-shadow: 0px 0px 5px black;
+}
+h2{
+    font-size: 60px;
+    font-family: MainFont;
+    color: var(--mainCol5);
+    text-shadow: 0px 0px 5px black;
+}
+h3{
+    font-size: 60px;
+    font-family: MainFont;
+    color: var(--mainCol5);
+    text-shadow: 0px 0px 5px black;
+}
+p{
+    font-size: 25px;
+    font-family: MainFont;
+    color: var(--mainCol5);
+    text-shadow: 0px 0px 5px black;
+}
+
+#booking{
+    width: 100%;
+    height: 70vh;
+    background-color: var(--mainCol2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#bookText{
+    width: 900px;
+    text-align: center;
+}
+#bookButton{
+    width: 400px;
+    height: 150px;
+    font-size: 50px;
+    font-family: MainFont;
+    text-decoration: none;
+    color: var(--mainCol5);
+
+    background-color: var(--mainCol2);
+    border: 5px solid var(--mainCol5);
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#infoGrid{
+    display: grid;
+    width: 50%;
+    height: 100vh;
+    margin-left: auto;
+	margin-right: auto;
+
+    grid-template-areas: 
+    "a1 i1"
+    "i2 a2"
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+#article1{
+    grid-area: a1;
+    background-color: violet;
+}
+#article2{
+    grid-area: a2;
+    background-color: rgb(163, 151, 163);
+}
+#img1{
+    grid-area: i1;
+    background-color: rgb(139, 238, 130);
+}
+#img2{
+    grid-area: i2;
+    background-color: rgb(238, 130, 130);
 }
