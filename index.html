@@ -1,3 +1,18 @@
+<!-- Saker att se över
+    - px till rem
+    - minmax på vissa ställen (Undvik endast fractions)
+    - ^ Testa med olika fönsterstorlekar ^
+    - Parallax på main bild
+    - animations (ksk skippar)
+    - Ny font
+    - Se över färger (huvudsakligen headern)
+    - Validera koden med bla https://validator.w3.org/nu/#textarea
+    - Testa med olika webläsare
+    - Testa kontraster
+    - Fixa logga
+    - Ändra storlek på bilder (max 200-300kb)
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +25,7 @@
 <body>
     <header>
         <nav id="navLinks">
-            <ul id="leftLinks"> <!-- !!!!FRÅGA!!!! Anledningen till att <li> inte används är för jag har inte hittat ett sätt att punkterna helt (Dom går att göra osynliga men texten kommer fortfarande flyttas lite till höger) -->
+            <ul id="leftLinks">
                 <li><a href="">Boka Bord</a></li>
                 <li><a href="">Vår Mat</a></li>
             </ul>
@@ -24,7 +39,7 @@
 
     <div id="banner">
         <h1>SPACE PLACE</h1>
-        <h3>Taking food to the next level</h3>
+        <h3>Taking food to a new height</h3>
     </div>
 
     <div id="booking">
@@ -33,10 +48,34 @@
     </div>
 
     <div id="infoGrid">
-        <article id="article1">yes</article>
-        <section id="img1">bild1</section>
-        <article id="article2">text2</article>
-        <section id="img2">bild2</section>
+        <article id="article1"><h3 class="infoHeader">Vad är Space Place?</h3><p class="infoText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut excepturi dicta praesentium quasi, voluptates porro, quisquam laudantium magnam facilis quibusdam et animi sapiente fuga voluptas quo minus aliquam ipsum quis neque molestiae aspernatur amet cumque quae? Cupiditate, voluptatibus. Quae at odio soluta delectus nemo recusandae vero, saepe, expedita ullam consequatur aliquam reprehenderit, libero corrupti earum! Culpa delectus qui accusantium ipsum quas corporis sunt doloremque aspernatur dignissimos omnis. Consequatur alias earum dolores perferendis obcaecati illum assumenda ea, quae eum. Explicabo, alias.</p></article>
+        <section id="img1" title="Rymdskepp i himmlen"></section>
+        <article id="article2"><h3 class="infoHeader">Maten Ombord</h3><p class="infoText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut excepturi dicta praesentium quasi, voluptates porro, quisquam laudantium magnam facilis quibusdam et animi sapiente fuga voluptas quo minus aliquam ipsum quis neque molestiae aspernatur amet cumque quae? Cupiditate, voluptatibus. Quae at odio soluta delectus nemo recusandae vero, saepe, expedita ullam consequatur aliquam reprehenderit, libero corrupti earum! Culpa delectus qui accusantium ipsum quas corporis sunt doloremque aspernatur dignissimos omnis. Consequatur alias earum dolores perferendis obcaecati illum assumenda ea, quae eum. Explicabo, alias.</p></article>
+        <section id="img2" title="Bild på maten"></section>
     </div>
+
+    <div id="map">
+        <h2>Hitta Hit</h2>
+        <!--Ifall det inte är självklart, nej jag har inte skrivit raden nedan själv, utan använt verktyget: https://google-map-generator.com/-->
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Origov%C3%A4gen%204,%20412%2058%20G%C3%B6teborg&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123 movies</a><br><style>.mapouter{position:relative;text-align:right;height:400px;width:600px;}</style><a href="https://www.embedgooglemap.net">embedding maps</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:600px;}</style></div></div>
+        <h3>Öppetider</h3>
+        <p>Mån-Fre IO-ZO, Lör-Sön IZ-ZE</p>
+    </div>
+
+    <footer>
+        <div id=footerGrid>
+            <img src="img\Logo.png" alt="Logo" id="fLogo">
+            <h3 id="fHeader">Space Place</h3>
+            <p id="fAdress">Origovägen a</p>
+            <p id="fNumber">tel: OLOGIOGEEL</p>
+            <p id="fMail">mail: s@somin.se</p>
+            <p id="fBook">Boka bord</p>
+            <p id="fMenu">Meny</p>
+            <p id="fAlle">Allergier</p>
+            <p id="fAbout">Om oss</p>
+            <p id="fSafety">Säkerhet</p>
+            <p id="fContact">Kontakt</p>
+        </div>
+    </footer>
 </body>
 </html>
