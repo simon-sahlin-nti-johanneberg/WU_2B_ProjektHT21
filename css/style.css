@@ -36,6 +36,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    cursor: pointer;
 }
 #navLinks{
     width: 100%;
@@ -82,7 +84,10 @@ li > a{
 #banner{
     width: 100%;
     height: 90vh;
-    background-image: url("../img/Banner.jpg");
+    background-image: url("../img/bannerGif.gif"); /*https://www.pexels.com/sv-se/video/854223/*/
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 100% auto;
 
     display: flex;
     flex-direction: column;
@@ -154,7 +159,7 @@ p{
 
     grid-template-areas: 
     "a1 i1"
-    "i2 iq"
+    "i2 i1"
     "i2 a2"
     ;
     grid-template-columns: 1fr 1fr;
@@ -209,58 +214,199 @@ p{
 footer{
     background-color: var(--mainCol1);
     width: 100%;
-    height: 35vh;
-    padding: 30px;
+    height: 40vh;
+    padding: 60px;
+    padding-right: 150px;
 }
 #footerGrid{
     display: grid;
     grid-template-areas: 
-    "flg fhe fbm fam"
-    "flg fhe fmm fsm"
-    "flg fhe flm fcm"
-    "flg fad fmn fma"
+    "flo fhe fm1 fm2"
+    "flo fco fco fco"
     ;
-    grid-template-columns: 3fr 3fr 3fr 5fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 7fr 6fr 6fr 6fr;
+    grid-template-rows: 3fr 1fr;
+
+    width: 100%;
+    height: 100%;
 }
 
 #fLogo{
-    grid-area: flg;
-    width: 200px;
-    height: 200px;
+    grid-area: flo;
+}
+#fLogo > img{
+    height: 100%;
 }
 #fHeader{
     grid-area: fhe;
     font-size: 60px;
 }
-#fAdress{
-    grid-area: fad;
+#fContacts{
+    grid-area: fco;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
 }
-#fNumber{
-    grid-area: fmn;
+#fMenuItems1{
+    grid-area: fm1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 20px;
 }
-#fMail{
-    grid-area: fma;
+#fMenuItems2{
+    grid-area: fm2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 20px;
 }
-#fBook{
-    grid-area: fbm;
-}
-#fMenu{
-    grid-area: fmm;
-}
-#fAlle{
-    grid-area: flm;
-}
-#fAbout{
-    grid-area: fam;
-}
-#fSafety{
-    grid-area: fsm;
-}
-#fContact{
-    grid-area: fcm;
-}
-footer > p{
-    font-size: 10px;
+.footerText{
+    font-size: 25px;
     text-align: center;
+    color: var(--mainCol5);
+    font-family: MainFont;
+    text-decoration: none;
+}
+
+
+/*---------------------SPECIFIC STYLING FOR ABOUT PAGE---------------------*/
+
+#aboutBanner{
+    width: 100%;
+    height: 40vh;
+    background-image: url(../img/Banner.jpg);
+    padding-left: 100px;
+    padding-top: 10px;
+}
+
+#aboutSpace{
+    width: 100%;
+    height: 250vh;
+    background-color: var(--mainCol1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr 3fr;
+    grid-template-areas: 
+    "a1 i1"
+    "ba ba"
+    "i2 a2"
+    ;
+    padding: 100px 200px 100px 200px;
+}
+#aboutSpace > img{
+    width: 100%;
+    height: 100%;
+}
+#abA1{
+    grid-area: a1;
+    overflow: hidden;
+    padding: 10px
+}
+#abA2{
+    grid-area: a2;
+    overflow: hidden;
+    padding: 10px;
+}
+#abI1{
+    grid-area: i1;
+    overflow: hidden;
+}
+#abI2{
+    grid-area: i2;
+    overflow: hidden;
+}
+#abBa{
+    grid-area: ba;
+    overflow: hidden;
+}
+#abI1 > img{
+    height: 100%;
+    width: auto;
+}
+#abI1, #abI2, #abBa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+#abI1 > img, #abI2 > img{
+    height: 100%;
+    width: auto;
+}
+#abBa > img{
+    width: 100%;
+    height: auto;
+}
+
+.screenBanner{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../img/Banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 100% auto;
+}
+
+
+/*---------------------SPECIFIC STYLING FOR MENU PAGE---------------------*/
+
+#menuWrapper{
+    background-color: var(--mainCol5);
+    width: 100%;
+    height: 150vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr 3fr;
+    grid-template-areas: 
+    "f1 i1"
+    "f1 f2"
+    "i2 f2"
+    ;
+}
+#foodItems1, #foodItems2, #foodImage1, #foodImage2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+#foodImage1 > img, #foodImage2 > img{
+    height: 100%;
+    width: auto;
+}
+#foodItems1{
+    grid-area: f1;
+}
+#foodItems2{
+    grid-area: f2;
+}
+#foodImage1{
+    grid-area: i1;
+}
+#foodImage1{
+    grid-area: i2;
+}
+
+.foodItem{
+    background-color: var(--mainCol2);
+    width: 100%;
+    height: 25%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "ih ip"
+    "id ip"
+    ;
+}
+.foodItem > h3{
+    grid-area: ih;
+}
+.foodItem > p{
+    grid-area: id;
+}
+.foodItem > em{
+    grid-area: ip;
 }

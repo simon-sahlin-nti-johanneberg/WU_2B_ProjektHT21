@@ -27,11 +27,11 @@
         <nav id="navLinks">
             <ul id="leftLinks">
                 <li><a href="">Boka Bord</a></li>
-                <li><a href="">Vår Mat</a></li>
+                <li><a href="menu.html">Vår Mat</a></li>
             </ul>
-            <div id="logoCircle"><img src="img\Logo.png" alt="Resturant Logo" id="logo"></div>
+            <div id="logoCircle" onclick="location.href='index.html';"><img src="img\Logo.png" alt="Resturant Logo" id="logo"></div>
             <ul id="rightLinks">
-                <li><a href="">Om oss</a></li>
+                <li><a href="about.html">Om oss</a></li>
                 <li><a href="">Kontakt</a></li>
             </ul>
         </nav>
@@ -39,7 +39,7 @@
 
     <div id="banner">
         <h1>SPACE PLACE</h1>
-        <h3>Taking food to a new height</h3>
+        <h3>Taking food to new heights</h3>
     </div>
 
     <div id="booking">
@@ -64,17 +64,23 @@
 
     <footer>
         <div id=footerGrid>
-            <img src="img\Logo.png" alt="Logo" id="fLogo">
-            <h3 id="fHeader">Space Place</h3>
-            <p id="fAdress">Origovägen a</p>
-            <p id="fNumber">tel: OLOGIOGEEL</p>
-            <p id="fMail">mail: s@somin.se</p>
-            <p id="fBook">Boka bord</p>
-            <p id="fMenu">Meny</p>
-            <p id="fAlle">Allergier</p>
-            <p id="fAbout">Om oss</p>
-            <p id="fSafety">Säkerhet</p>
-            <p id="fContact">Kontakt</p>
+            <div id="fLogo"><img src="img\Logo.png" alt="Logo"></div>
+            <div id="fHeader"><h3>Space Place</h3></div>
+            <div id="fContacts">
+                <p class="footerText">Origovägen a</p>
+                <p class="footerText">tel: OLOGIOGEEL</p>
+                <p class="footerText">mail: s@somin.se</p>
+            </div>
+            <div id="fMenuItems1">
+                <a href="" class="footerText">Boka bord</a>
+                <a href="menu.html" class="footerText">Meny</a>
+                <a href="" class="footerText">Allergier</a>
+            </div>
+            <div id="fMenuItems2">
+                <a href="about.html" class="footerText">Om oss</a>
+                <a href="" class="footerText">Säkerhet</a>
+                <a href="" class="footerText">Kontakt</a>
+            </div>
         </div>
     </footer>
 </body>
