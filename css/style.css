@@ -5,10 +5,8 @@
     --mainCol3: #0D21A1;
     --mainCol4: #EEC643;
     --mainCol5: #EEF0F2;
-}
-@font-face {
-    font-family: "MainFont";
-    src: url("../fonts/Coco-Sharp-Heavy-trial.ttf");
+    --mainHeadFont: 'Raleway', sans-serif;
+    --mainBreadFont: 'Roboto Slab', serif;
 }
 
 
@@ -26,10 +24,9 @@ body{
 #logo{
     width: 120px;
     height: 120px;
-    
 }
 #logoCircle{
-    background-color: var(--mainCol4);
+    background-color: var(--mainCol1);
     width: 150px;
     height: 150px;
     border-radius: 150px;
@@ -41,87 +38,96 @@ body{
 }
 #navLinks{
     width: 100%;
-    height: 80px;
+    height: 70px;
 
-    background-color: var(--mainCol4);
+    background-color: var(--mainCol1);
 
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 10px;
+    gap: 2%;
 }
 #leftLinks{
     list-style-type: none;
 
     height: 100%;
-    width: 500px;
+    width: 25%;
 
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 45px;
+    gap: 15%;
 }
 #rightLinks{
     list-style-type: none;
 
     height: 100%;
-    width: 500px;
+    width: 25%;
 
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 45px;
+    gap: 15%;
 }
 
 li > a{
-    font-size: 35px;
-    font-family: MainFont;
+    font-size: 1.9rem;
+    font-family: var(--mainHeadFont);
+    font-weight: 900;
     text-decoration: none;
-    color: var(--mainCol1);
+    color: var(--mainCol5);
 }
 /*--------------------*/
 
 #banner{
     width: 100%;
-    height: 90vh;
+    height: 675px;
     background-image: url("../img/bannerGif.gif"); /*https://www.pexels.com/sv-se/video/854223/*/
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
-    background-size: 100% auto;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+#banner > *{
+    text-align: center;
+}
 h1{
     font-size: 150px;
-    font-family: MainFont;
+    font-family: var(--mainHeadFont);
+    font-weight: 900;
     color: var(--mainCol5);
     text-shadow: 0px 0px 5px black;
 }
 h2{
     font-size: 80px;
-    font-family: MainFont;
+    font-family: var(--mainHeadFont);
+    font-weight: 900;
     color: var(--mainCol5);
     text-shadow: 0px 0px 5px black;
 }
 h3{
-    font-size: 60px;
-    font-family: MainFont;
+    font-size: 3.8rem;
+    font-family: var(--mainHeadFont);
+    font-weight: 900;
     color: var(--mainCol5);
     text-shadow: 0px 0px 5px black;
 }
 p{
-    font-size: 25px;
-    font-family: MainFont;
+    font-size: 1.5rem;
+    font-family: var(--mainBreadFont);
+    font-weight: 500;
     color: var(--mainCol5);
     text-shadow: 0px 0px 5px black;
 }
 
 #booking{
     width: 100%;
-    height: 70vh;
+    height: auto;
+    padding: 50px 20% 50px 20%;
     background-color: var(--mainCol2);
 
     display: flex;
@@ -131,14 +137,15 @@ p{
     gap: 30px;
 }
 #bookText{
-    width: 900px;
+    width: 100%;
     text-align: center;
 }
 #bookButton{
     width: 400px;
     height: 150px;
     font-size: 50px;
-    font-family: MainFont;
+    font-family: var(--mainHeadFont);
+    font-weight: 900;
     text-decoration: none;
     color: var(--mainCol5);
 
@@ -154,7 +161,7 @@ p{
 #infoGrid{
     display: grid;
     width: 70%;
-    height: 150vh;
+    height: auto;
     margin: 100px auto 100px auto;
 
     grid-template-areas: 
@@ -163,7 +170,7 @@ p{
     "i2 a2"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 200px 1fr;
     grid-gap: 20px;
 }
 #article1{
@@ -195,7 +202,7 @@ p{
 .infoText{
     color: var(--mainCol2);
     text-shadow: none;
-    font-size: 20px;
+    font-size: 1.3rem;
 }
 
 
@@ -203,20 +210,23 @@ p{
 #map{
     background-color: var(--mainCol2);
     width: 100%;
-    height: 90vh;
+    height: auto;
+    padding: 50px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 footer{
     background-color: var(--mainCol1);
     width: 100%;
-    height: 40vh;
+    height: 43vh;
     padding: 60px;
     padding-right: 150px;
+    overflow: hidden;
 }
 #footerGrid{
     display: grid;
@@ -262,10 +272,11 @@ footer{
     padding-bottom: 20px;
 }
 .footerText{
-    font-size: 25px;
+    font-size: 1.5rem;
     text-align: center;
     color: var(--mainCol5);
-    font-family: MainFont;
+    font-family: var(--mainBreadFont);
+    font-weight: 900;
     text-decoration: none;
 }
 
@@ -274,15 +285,15 @@ footer{
 
 #aboutBanner{
     width: 100%;
-    height: 40vh;
+    height: auto;
     background-image: url(../img/Banner.jpg);
-    padding-left: 100px;
+    padding-left: 7%;
     padding-top: 10px;
 }
 
 #aboutSpace{
     width: 100%;
-    height: 250vh;
+    height: 118rem;
     background-color: var(--mainCol1);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -292,7 +303,7 @@ footer{
     "ba ba"
     "i2 a2"
     ;
-    padding: 100px 200px 100px 200px;
+    padding: 100px 10% 100px 10%;
 }
 #aboutSpace > img{
     width: 100%;
@@ -345,14 +356,22 @@ footer{
     background-image: url(../img/Banner.jpg);
     background-repeat: no-repeat;
     background-position: center; 
-    background-size: 100% auto;
+    background-size: cover;
 }
 
 
 /*---------------------SPECIFIC STYLING FOR MENU PAGE---------------------*/
 
-#menuWrapper{
-    background-color: var(--mainCol5);
+#menuBanner{
+    width: 100%;
+    height: 40vh;
+    background-image: url(../img/Banner.jpg);
+    text-align: center;
+    padding-top: 100px;
+}
+.menuWrapper{
+    padding: 100px;
+    background-color: var(--mainCol1);
     width: 100%;
     height: 150vh;
 
@@ -365,36 +384,45 @@ footer{
     "i2 f2"
     ;
 }
-#foodItems1, #foodItems2, #foodImage1, #foodImage2{
+.foodItems1, .foodItems2, .foodImage1, .foodImage2{
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden
 }
-#foodImage1 > img, #foodImage2 > img{
+.foodItems1, .foodItems2{
+    flex-direction: column;
+}
+.foodImage1 > img, .foodImage2 > img{
+    object-fit: cover;
     height: 100%;
-    width: auto;
+    width: 100%;
 }
-#foodItems1{
+.foodItems1{
     grid-area: f1;
+    border-top-left-radius: 30px;
 }
-#foodItems2{
+.foodItems2{
     grid-area: f2;
+    border-bottom-right-radius: 30px;
 }
-#foodImage1{
+.foodImage1{
     grid-area: i1;
+    border-top-right-radius: 100px;
 }
-#foodImage1{
+.foodImage2{
     grid-area: i2;
+    border-bottom-left-radius: 100px;
 }
 
 .foodItem{
+    padding: 10px 20px 10px 30px;
     background-color: var(--mainCol2);
     width: 100%;
     height: 25%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 5fr 2fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "ih ip"
@@ -403,10 +431,21 @@ footer{
 }
 .foodItem > h3{
     grid-area: ih;
+    font-size: 50px;
 }
 .foodItem > p{
     grid-area: id;
+    font-size: 1.25rem;
 }
 .foodItem > em{
+    color: var(--mainCol5);
+    font-family: var(--mainBreadFont);
+    font-weight: 900;
+    font-style: normal;
+    font-size: 50px;
     grid-area: ip;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,16 +1,10 @@
 <!-- Saker att se över
-    - px till rem
-    - minmax på vissa ställen (Undvik endast fractions)
-    - ^ Testa med olika fönsterstorlekar ^
-    - Parallax på main bild
-    - animations (ksk skippar)
-    - Ny font
-    - Se över färger (huvudsakligen headern)
     - Validera koden med bla https://validator.w3.org/nu/#textarea
+        - Mindre fel eller fel som jag inte förstår
+        - Titta med Leo
     - Testa med olika webläsare
-    - Testa kontraster
+        - Footer fuckar upp med firefox, fixa efter loggan
     - Fixa logga
-    - Ändra storlek på bilder (max 200-300kb)
 -->
 
 <!DOCTYPE html>
@@ -20,7 +14,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Place</title>
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -29,7 +26,7 @@
                 <li><a href="">Boka Bord</a></li>
                 <li><a href="menu.html">Vår Mat</a></li>
             </ul>
-            <div id="logoCircle" onclick="location.href='index.html';"><img src="img\Logo.png" alt="Resturant Logo" id="logo"></div>
+            <div id="logoCircle" onclick="location.href='index.html';"><img src="img/Logo.png" alt="Resturant Logo" id="logo"></div>
             <ul id="rightLinks">
                 <li><a href="about.html">Om oss</a></li>
                 <li><a href="">Kontakt</a></li>
@@ -43,32 +40,32 @@
     </div>
 
     <div id="booking">
-        <p id="bookText">Space Place ger dig en unik upplevelse Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem enim perspiciatis ab dolorum ducimus et eum? Voluptas iusto sunt dicta eveniet, cumque accusamus ipsum. Aperiam iste inventore minus corrupti tempora repudiandae odit, amet voluptatum optio nihil nemo animi illum laboriosam aliquam et itaque, error aut veritatis obcaecati possimus temporibus quisquam.</p>
+        <p id="bookText">Space Place ger dig en unik upplevelse ipsum dolor sit amet, consectetur adipisicing elit. Quidem enim perspiciatis ab dolorum ducimus et eum? Voluptas iusto sunt dicta eveniet, cumque accusamus ipsum. Aperiam iste inventore minus corrupti tempora repudiandae odit, amet voluptatum optio nihil nemo animi illum laboriosam aliquam et itaque, error aut veritatis obcaecati possimus temporibus quisquam och en dag som du säkerligen aldrig kommer glömma.</p>
         <a id="bookButton" href="">Boka Bord</a>
     </div>
 
     <div id="infoGrid">
-        <article id="article1"><h3 class="infoHeader">Vad är Space Place?</h3><p class="infoText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut excepturi dicta praesentium quasi, voluptates porro, quisquam laudantium magnam facilis quibusdam et animi sapiente fuga voluptas quo minus aliquam ipsum quis neque molestiae aspernatur amet cumque quae? Cupiditate, voluptatibus. Quae at odio soluta delectus nemo recusandae vero, saepe, expedita ullam consequatur aliquam reprehenderit, libero corrupti earum! Culpa delectus qui accusantium ipsum quas corporis sunt doloremque aspernatur dignissimos omnis. Consequatur alias earum dolores perferendis obcaecati illum assumenda ea, quae eum. Explicabo, alias.</p></article>
+        <article id="article1"><h3 class="infoHeader">Vad är Space Place?</h3><p class="infoText">Med den nyaste teknologin inom rymdfärer tillåter vi dig att äta mat i rymden, i noll g. consectetur, adipisicing elit. Aut excepturi dicta praesentium quasi, voluptates porro, quisquam laudantium magnam facilis quibusdam et animi sapiente fuga voluptas quo minus aliquam ipsum quis neque molestiae aspernatur amet cumque quae? Cupiditate, voluptatibus. Quae at odio soluta delectus nemo recusandae vero, saepe, expedita ullam consequatur aliquam reprehenderit, libero corrupti earum! Culpa delectus qui accusantium ipsum quas corporis sunt doloremque aspernatur dignissimos omnis. Consequatur alias earum dolores perferendis obcaecati är du redo att äta på ett sätt som aldrig gjorts innan?</p></article>
         <section id="img1" title="Rymdskepp i himmlen"></section>
-        <article id="article2"><h3 class="infoHeader">Maten Ombord</h3><p class="infoText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut excepturi dicta praesentium quasi, voluptates porro, quisquam laudantium magnam facilis quibusdam et animi sapiente fuga voluptas quo minus aliquam ipsum quis neque molestiae aspernatur amet cumque quae? Cupiditate, voluptatibus. Quae at odio soluta delectus nemo recusandae vero, saepe, expedita ullam consequatur aliquam reprehenderit, libero corrupti earum! Culpa delectus qui accusantium ipsum quas corporis sunt doloremque aspernatur dignissimos omnis. Consequatur alias earum dolores perferendis obcaecati illum assumenda ea, quae eum. Explicabo, alias.</p></article>
+        <article id="article2"><h3 class="infoHeader">Maten Ombord</h3><p class="infoText">ombord på farkosten serveras många olika typer av mat, quasi, voluptates porro, quisquam laudantium magnam facilis quibusdam et animi sapiente fuga voluptas quo minus aliquam ipsum quis neque molestiae aspernatur amet cumque quae? Cupiditate, voluptatibus. Quae at odio soluta delectus nemo recusandae vero, saepe, expedita ullam consequatur aliquam reprehenderit, libero corrupti earum! Culpa delectus qui accusantium ipsum quas corporis sunt doloremque aspernatur dignissimos omnis. Consequatur så ta en titt på menyn och smaklig måltid!</p></article>
         <section id="img2" title="Bild på maten"></section>
     </div>
 
     <div id="map">
         <h2>Hitta Hit</h2>
         <!--Ifall det inte är självklart, nej jag har inte skrivit raden nedan själv, utan använt verktyget: https://google-map-generator.com/-->
-        <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Origov%C3%A4gen%204,%20412%2058%20G%C3%B6teborg&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123 movies</a><br><style>.mapouter{position:relative;text-align:right;height:400px;width:600px;}</style><a href="https://www.embedgooglemap.net">embedding maps</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:600px;}</style></div></div>
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Origov%C3%A4gen%204,%20412%2058%20G%C3%B6teborg&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe><a href="https://123movies-to.org">123 movies</a><br><style>.mapouter{position:relative;text-align:right;height:400px;width:600px;}</style><a href="https://www.embedgooglemap.net">embedding maps</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:600px;}</style></div></div>
         <h3>Öppetider</h3>
-        <p>Mån-Fre IO-ZO, Lör-Sön IZ-ZE</p>
+        <p>Mån-Fre 10-20, Lör-Sön 12-23</p>
     </div>
 
     <footer>
         <div id=footerGrid>
-            <div id="fLogo"><img src="img\Logo.png" alt="Logo"></div>
+            <div id="fLogo"><img src="img/Logo.png" alt="Logo"></div>
             <div id="fHeader"><h3>Space Place</h3></div>
             <div id="fContacts">
-                <p class="footerText">Origovägen a</p>
-                <p class="footerText">tel: OLOGIOGEEL</p>
+                <p class="footerText">Origovägen 4</p>
+                <p class="footerText">tel: 0706106337</p>
                 <p class="footerText">mail: s@somin.se</p>
             </div>
             <div id="fMenuItems1">
